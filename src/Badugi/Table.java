@@ -15,9 +15,9 @@ public class Table
     private Scanner money;
     Player randomPlayer, beginningPlayer, victor, smallBlindPlayer, bigBlindPlayer;
 
-    public static boolean dealerButton = false, smallBlind = false, bigBlind = false;
+    public static boolean dealerButton = false, smallBlind = false, bigBlind = false, continued = false;
     int AllIn = 0, bet = 0, bid = 0;
-    public static int bank, paymentSmallBlind, paymentBigBlind, biddingNumber;
+    public static int bank = 0, paymentSmallBlind, paymentBigBlind, biddingNumber;
 
     public Table(int playersNumber, int botsNumber)
     {
@@ -573,15 +573,39 @@ public class Table
 
     void finishGame()
     {
-        System.out.print("Press any key to finish: ");
-        sc.nextLine();
-        simulateScreenCleanup();
+        System.out.println("1. Continue game.");
+        System.out.println("2. Finish game.");
+        try
+        {
+            int decision = sc.nextInt();
+            switch(decision)
+            {
+                case 1:
+                    continued = true;
+                    game();
+                    break;
+                case 2:
+                    System.out.print("Press any key to finish: ");
+                    sc.nextLine();
+                    simulateScreenCleanup();
+                    break;
+                default: finishGame();
+                    break;
+
+            }
+        }
+        catch (InputMismatchException f)
+        {
+            System.out.println("Try again!");
+            finishGame();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public final void game() throws Exception
     {
         System.out.println("The game has begun.");
-        bank = 0;
         randomDealerButton();
         assignBlinds();
         dealChips();
