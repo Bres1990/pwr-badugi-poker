@@ -319,6 +319,8 @@ public class Table
             payment = sc.nextInt();
         }
 
+        betsSmallBig();
+
         for (Iterator<Player> i = players.iterator(); i.hasNext(); )
         {
             Player currentPlayer = i.next();
@@ -359,7 +361,7 @@ public class Table
         }
         System.out.println("Bank raised "+bank+" chips.");
 
-        betsSmallBig();
+
     }
 
     void betsSmallBig()

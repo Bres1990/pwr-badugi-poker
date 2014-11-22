@@ -5,6 +5,6 @@ package Badugi;
  */
 public enum Suit
 {
-    kier, karo, pik, trefl
+    heart, diamond, spear, club
 }
 
