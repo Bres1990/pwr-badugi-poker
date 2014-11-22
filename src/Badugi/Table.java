@@ -755,7 +755,6 @@ public class Table
         displayTable();
         whoHasWon();
         chipsCounting();
-//              System.out.println("chips counted");
         finishGame();
     }
 
