@@ -28,7 +28,7 @@ public class Human extends Player {
         do {
             toExchange.clear();
 
-            System.out.print("Ktore cards chcesz wymienic?: ");
+            System.out.print("Which cards do you want to exchange?: ");
             choice = sc.next();
             boolean errorOccurred = false;
             if (choice.contains(",") || choice.length() == 1)
@@ -72,7 +72,7 @@ public class Human extends Player {
                 System.out.print("Do you confirm?: [Y/N] ");
                 choice = sc.next();
             }
-        } while (!choice.equals("T"));
+        } while (!choice.equals("Y"));
 
         // Ktore cards chcesz wymienic?: 1,2,3
         // Bledny format danych | Mozesz wymienic maskymalnie 3 cards

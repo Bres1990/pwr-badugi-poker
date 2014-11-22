@@ -80,22 +80,22 @@ public class Table
     void dealChips() throws Exception
     {
         try {
-            System.out.println("What's the initial chips amount (higher than 0)?");
-            money = new Scanner(System.in);
-
-            int sumOfChips = money.nextInt();
-            if (sumOfChips <= 0)
+            if (continued == false)
             {
-                System.out.println("Chips amount must be higher than 0! Try again . . .");
+                System.out.println("What's the initial chips amount (higher than 0)?");
                 money = new Scanner(System.in);
-                sumOfChips = money.nextInt();
-            }
 
-            for (Player currentPlayer : players)
-            {
-                currentPlayer.chips = sumOfChips ;
-            }
+                int sumOfChips = money.nextInt();
+                if (sumOfChips <= 0) {
+                    System.out.println("Chips amount must be higher than 0! Try again . . .");
+                    money = new Scanner(System.in);
+                    sumOfChips = money.nextInt();
+                }
 
+                for (Player currentPlayer : players) {
+                    currentPlayer.chips = sumOfChips;
+                }
+            }
         }
         catch (InputMismatchException f) {
             System.out.println("Try Again!");
@@ -442,7 +442,7 @@ public class Table
                                 }
                                 else
                                 {
-                                    System.out.println("You don't have eonugh chips! Specify bid amount again: ");
+                                    System.out.println("You don't have enough chips! Specify bid amount again: ");
                                     bet += sc.nextInt();
                                     currentPlayer.chips -= bet;
                                     bank += bet;
@@ -736,6 +736,7 @@ public class Table
     {
         System.out.println("The game has begun.");
         allInFlag = false;
+        bank = 0;
         randomDealerButton();
         assignBlinds();
         dealChips();

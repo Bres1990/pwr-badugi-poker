@@ -38,18 +38,30 @@
       <file leaf-file-name="Menu.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Badugi/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3896" max-vertical-offset="4352">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4352">
               <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Table.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Human.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Badugi/Human.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.5350878" vertical-offset="0" max-vertical-offset="1989">
+              <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Table.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Badugi/Table.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4604966" vertical-offset="12546" max-vertical-offset="13022">
-              <caret line="750" column="19" selection-start-line="750" selection-start-column="19" selection-end-line="750" selection-end-column="19" />
+            <state vertical-scroll-proportion="-4.88" vertical-offset="7970" max-vertical-offset="13039">
+              <caret line="476" column="9" selection-start-line="476" selection-start-column="9" selection-end-line="476" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -92,10 +104,10 @@
         <option value="$PROJECT_DIR$/src/Badugi/Deck.java" />
         <option value="$PROJECT_DIR$/src/Badugi/Player.java" />
         <option value="$PROJECT_DIR$/src/Badugi/Decision.java" />
-        <option value="$PROJECT_DIR$/src/Badugi/Human.java" />
         <option value="$PROJECT_DIR$/src/Badugi/Bot.java" />
         <option value="$PROJECT_DIR$/src/Badugi/Hand.java" />
         <option value="$PROJECT_DIR$/src/Badugi/Table.java" />
+        <option value="$PROJECT_DIR$/src/Badugi/Human.java" />
       </list>
     </option>
   </component>
@@ -561,12 +573,12 @@
       <workItem from="1416443609885" duration="6872000" />
       <workItem from="1416472246378" duration="1785000" />
       <workItem from="1416660061930" duration="6341000" />
-      <workItem from="1416668032563" duration="7469000" />
+      <workItem from="1416668032563" duration="8285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26349000" />
+    <option name="totallyTimeSpent" value="27165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -800,13 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Badugi/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0" vertical-offset="417" max-vertical-offset="2091">
-          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Badugi/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7234042" vertical-offset="0" max-vertical-offset="752">
@@ -847,6 +852,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Badugi/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.88" vertical-offset="7970" max-vertical-offset="13039">
+          <caret line="476" column="9" selection-start-line="476" selection-start-column="9" selection-end-line="476" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Badugi/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3896" max-vertical-offset="4352">
@@ -855,11 +868,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Badugi/Table.java">
+    <entry file="file://$PROJECT_DIR$/src/Badugi/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4604966" vertical-offset="12546" max-vertical-offset="13022">
-          <caret line="750" column="19" selection-start-line="750" selection-start-column="19" selection-end-line="750" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="2.5350878" vertical-offset="0" max-vertical-offset="1989">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
