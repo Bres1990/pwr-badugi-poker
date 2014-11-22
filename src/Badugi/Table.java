@@ -155,25 +155,152 @@ public class Table
         }
     }
 
+
+
     void assignBlinds()
     {
-        for (ListIterator<Player> i = players.listIterator(); i.hasNext(); )
+        if (players.size() == 2)
         {
-            Player currentPlayer = i.next();
-            if (currentPlayer == randomPlayer) {
-                currentPlayer = i.next();
-                currentPlayer.smallBlind = true;
-                System.out.println(currentPlayer+ " has small blind.");
-                currentPlayer = smallBlindPlayer;
-                currentPlayer = i.next();
-                currentPlayer.bigBlind = true;
-                System.out.println(currentPlayer+ " has big blind.");
-                currentPlayer = bigBlindPlayer;
+            if (players.get(0).dealerButton == true)
+            {
+                players.get(0).bigBlind = true;
+                System.out.println(players.get(0)+" has big blind.");
+                players.get(1).smallBlind = true;
+                System.out.println(players.get(1)+" has small blind.");
+            } else if (players.get(1).dealerButton == true)
+            {
+                players.get(0).smallBlind = true;
+                System.out.println(players.get(0)+" has small blind.");
+                players.get(1).bigBlind = true;
+                System.out.println(players.get(1)+" has big blind.");
             }
-
-
+        }
+        else if (players.size() == 3)
+        {
+            if (players.get(0).dealerButton == true)
+            {
+                players.get(1).smallBlind = true;
+                System.out.println(players.get(1)+" has small blind.");
+                players.get(2).bigBlind = true;
+                System.out.println(players.get(2)+" has big blind.");
+            } else if (players.get(1).dealerButton == true)
+            {
+                players.get(2).smallBlind = true;
+                System.out.println(players.get(2)+" has small blind.");
+                players.get(0).bigBlind = true;
+                System.out.println(players.get(0)+" has big blind.");
+            } else if (players.get(2).dealerButton == true)
+            {
+                players.get(0).smallBlind = true;
+                System.out.println(players.get(0)+" has small blind.");
+                players.get(1).bigBlind = true;
+                System.out.println(players.get(1)+" has big blind.");
+            }
+        }
+        else if (players.size() == 4)
+        {
+            if (players.get(0).dealerButton == true)
+            {
+                players.get(1).smallBlind = true;
+                System.out.println(players.get(1)+" has small blind.");
+                players.get(2).bigBlind = true;
+                System.out.println(players.get(2)+" has big blind.");
+            } else if (players.get(1).dealerButton == true)
+            {
+                players.get(2).smallBlind = true;
+                System.out.println(players.get(2)+" has small blind.");
+                players.get(3).bigBlind = true;
+                System.out.println(players.get(3)+" has big blind.");
+            } else if (players.get(2).dealerButton == true)
+            {
+                players.get(3).smallBlind = true;
+                System.out.println(players.get(3)+" has small blind.");
+                players.get(0).bigBlind = true;
+                System.out.println(players.get(0)+" has big blind.");
+            } else if (players.get(3).dealerButton == true)
+            {
+                players.get(0).smallBlind = true;
+                System.out.println(players.get(0)+" has small blind.");
+                players.get(1).bigBlind = true;
+                System.out.println(players.get(1)+" has big blind.");
+            }
+        }
+        else if (players.size() == 5)
+        {
+            if (players.get(0).dealerButton == true)
+            {
+                players.get(1).smallBlind = true;
+                System.out.println(players.get(1)+" has small blind.");
+                players.get(2).bigBlind = true;
+                System.out.println(players.get(2)+" has big blind.");
+            } else if (players.get(1).dealerButton == true)
+            {
+                players.get(2).smallBlind = true;
+                System.out.println(players.get(2)+" has small blind.");
+                players.get(3).bigBlind = true;
+                System.out.println(players.get(3)+" has big blind.");
+            } else if (players.get(2).dealerButton == true)
+            {
+                players.get(3).smallBlind = true;
+                System.out.println(players.get(3)+" has small blind.");
+                players.get(4).bigBlind = true;
+                System.out.println(players.get(4)+" has big blind.");
+            } else if (players.get(3).dealerButton == true)
+            {
+                players.get(4).smallBlind = true;
+                System.out.println(players.get(4)+" has small blind.");
+                players.get(0).bigBlind = true;
+                System.out.println(players.get(0)+" has big blind.");
+            } else if (players.get(4).dealerButton == true)
+            {
+                players.get(0).smallBlind = true;
+                System.out.println(players.get(0)+" has small blind.");
+                players.get(1).bigBlind = true;
+                System.out.println(players.get(1)+" has big blind.");
+            }
+        }
+        else if (players.size() == 6)
+        {
+            if (players.get(0).dealerButton == true)
+            {
+                players.get(1).smallBlind = true;
+                System.out.println(players.get(1)+" has small blind.");
+                players.get(2).bigBlind = true;
+                System.out.println(players.get(2)+" has big blind.");
+            } else if (players.get(1).dealerButton == true)
+            {
+                players.get(2).smallBlind = true;
+                System.out.println(players.get(2)+" has small blind.");
+                players.get(3).bigBlind = true;
+                System.out.println(players.get(3)+" has big blind.");
+            } else if (players.get(2).dealerButton == true)
+            {
+                players.get(3).smallBlind = true;
+                System.out.println(players.get(3)+" has small blind.");
+                players.get(4).bigBlind = true;
+                System.out.println(players.get(4)+" has big blind.");
+            } else if (players.get(3).dealerButton == true)
+            {
+                players.get(4).smallBlind = true;
+                System.out.println(players.get(4)+" has small blind.");
+                players.get(5).bigBlind = true;
+                System.out.println(players.get(5)+" has big blind.");
+            } else if (players.get(4).dealerButton == true)
+            {
+                players.get(5).smallBlind = true;
+                System.out.println(players.get(5)+" has small blind.");
+                players.get(0).bigBlind = true;
+                System.out.println(players.get(0)+" has big blind.");
+            } else if (players.get(5).dealerButton == true)
+            {
+                players.get(0).smallBlind = true;
+                System.out.println(players.get(0)+" has small blind.");
+                players.get(1).bigBlind = true;
+                System.out.println(players.get(1)+" has big blind.");
+            }
         }
     }
+
 
 
 
@@ -255,11 +382,7 @@ public class Table
             bet = 0;
             bid = 0;
         }
-        if (biddingNumber != 1)
-        {
-            assignDealerButton();
-            assignBlinds();
-        }
+
         System.out.println("-----------------------------------------------");
         System.out.println("Bidding phase number "+biddingNumber+ " is in effect.");
         whoBegins();
