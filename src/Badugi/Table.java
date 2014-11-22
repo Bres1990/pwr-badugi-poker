@@ -15,7 +15,7 @@ public class Table
     private Scanner money;
     Player randomPlayer, beginningPlayer, victor, smallBlindPlayer, bigBlindPlayer;
 
-    public static boolean dealerButton = false, smallBlind = false, bigBlind = false, continued = false;
+    public static boolean dealerButton = false, smallBlind = false, bigBlind = false, continued = false, allInFlag = false;
     int AllIn = 0, bet = 0, bid = 0;
     public static int bank = 0, paymentSmallBlind, paymentBigBlind, biddingNumber;
 
@@ -105,10 +105,10 @@ public class Table
 
     void chipsCounting()
     {
-        /*
+
                 for (Player currentPlayer : players)
                 {
-                        if (flag == false) {
+                        if (allInFlag == false) {
                                 if (currentPlayer == victor)
                                 {
                                         currentPlayer.chips += bank;
@@ -127,7 +127,7 @@ public class Table
                                 }
                         }
                 }
-        */
+
     }
 
     void randomDealerButton()
@@ -462,7 +462,7 @@ public class Table
                             break;
                             case 4:
                             {
-                                //flag = true;
+                                allInFlag = true;
                                 AllIn = currentPlayer.chips;
                                 bank += currentPlayer.chips;
                                 currentPlayer.chips = 0;
@@ -473,6 +473,10 @@ public class Table
                                 {
                                     currentPlayer = i.next();
                                 }
+                                exchange(biddingNumber);
+                                displayTable();
+                                whoHasWon();
+                                finishGame();
                             }
                             break;
                             default: bidding(1);
@@ -565,7 +569,7 @@ public class Table
                                 break;
                                 case 5:
                                 {
-                                    //flag = true;
+                                    allInFlag = true;
                                     AllIn = currentPlayer.chips;
                                     bank += currentPlayer.chips;
                                     currentPlayer.chips = 0;
@@ -576,6 +580,10 @@ public class Table
                                     {
                                         currentPlayer = i.next();
                                     }
+                                    exchange(biddingNumber);
+                                    displayTable();
+                                    whoHasWon();
+                                    finishGame();
                                 }
                                 break;
                                 default: bidding(1);
@@ -708,9 +716,7 @@ public class Table
                     game();
                     break;
                 case 2:
-                    System.out.print("Press any key to finish: ");
-                    sc.nextLine();
-                    simulateScreenCleanup();
+                    continued = false;
                     break;
                 default: finishGame();
                     break;
@@ -729,6 +735,7 @@ public class Table
     public final void game() throws Exception
     {
         System.out.println("The game has begun.");
+        allInFlag = false;
         randomDealerButton();
         assignBlinds();
         dealChips();
@@ -736,24 +743,15 @@ public class Table
         dealCards();
         System.out.println("Cards dealt.");
         bidding(1);
-//              System.out.println("bidding 1 finished");
         exchange(1);
-//              System.out.println("exchange 1 finished");
         bidding(2);
-//              System.out.println("bidding 2 finished");
         exchange(2);
-//              System.out.println("exchange 2 finished");
         bidding(3);
-//              System.out.println("bidding 3 finished");
         exchange(3);
-//              System.out.println("exchange 3 finished");
         bidding(4);
-//              System.out.println("bidding 4 finished");
         displayTable();
-//              System.out.println("table displayed");
         whoHasWon();
-//              System.out.println("victor specified");
-//              chipsCounting();
+        chipsCounting();
 //              System.out.println("chips counted");
         finishGame();
     }
